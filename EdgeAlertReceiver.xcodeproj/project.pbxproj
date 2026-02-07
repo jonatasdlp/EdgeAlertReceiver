@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		49BCAE432F37E4F000915F8A /* ConnectIQ.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BCAE422F37E4F000915F8A /* ConnectIQ.xcframework */; };
+		49BCAE442F37E4F000915F8A /* ConnectIQ.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49BCAE422F37E4F000915F8A /* ConnectIQ.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		49C63E342F1C39EC00018F40 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -23,15 +28,43 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		49BCAE452F37E4F000915F8A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				49BCAE442F37E4F000915F8A /* ConnectIQ.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		49BCAE422F37E4F000915F8A /* ConnectIQ.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ConnectIQ.xcframework; sourceTree = "<group>"; };
 		49C63E262F1C39EB00018F40 /* EdgeAlertReceiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdgeAlertReceiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C63E332F1C39EC00018F40 /* EdgeAlertReceiverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdgeAlertReceiverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C63E3D2F1C39EC00018F40 /* EdgeAlertReceiverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdgeAlertReceiverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		49C63E572F1C427D00018F40 /* Exceptions for "EdgeAlertReceiver" folder in "EdgeAlertReceiver" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 49C63E252F1C39EB00018F40 /* EdgeAlertReceiver */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		49C63E282F1C39EB00018F40 /* EdgeAlertReceiver */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				49C63E572F1C427D00018F40 /* Exceptions for "EdgeAlertReceiver" folder in "EdgeAlertReceiver" target */,
+			);
 			path = EdgeAlertReceiver;
 			sourceTree = "<group>";
 		};
@@ -52,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BCAE432F37E4F000915F8A /* ConnectIQ.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +112,7 @@
 				49C63E282F1C39EB00018F40 /* EdgeAlertReceiver */,
 				49C63E362F1C39EC00018F40 /* EdgeAlertReceiverTests */,
 				49C63E402F1C39EC00018F40 /* EdgeAlertReceiverUITests */,
+				49C63E512F1C3A1A00018F40 /* Frameworks */,
 				49C63E272F1C39EB00018F40 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +127,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		49C63E512F1C3A1A00018F40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49BCAE422F37E4F000915F8A /* ConnectIQ.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,6 +145,7 @@
 				49C63E222F1C39EB00018F40 /* Sources */,
 				49C63E232F1C39EB00018F40 /* Frameworks */,
 				49C63E242F1C39EB00018F40 /* Resources */,
+				49BCAE452F37E4F000915F8A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,6 +239,8 @@
 			);
 			mainGroup = 49C63E1D2F1C39EB00018F40;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 49C63E272F1C39EB00018F40 /* Products */;
 			projectDirPath = "";
@@ -400,6 +446,10 @@
 				DEVELOPMENT_TEAM = GJV9T7SMZ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EdgeAlertReceiver/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app connects to Garmin devices to receive alerts.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "This app uses Bluetooth to communicate with Garmin devices.";
+				INFOPLIST_KEY_NSBluetoothWhileInUseUsageDescription = "uses it here";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -410,6 +460,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.EdgeAlertReceiver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -432,6 +486,10 @@
 				DEVELOPMENT_TEAM = GJV9T7SMZ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EdgeAlertReceiver/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app connects to Garmin devices to receive alerts.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "This app uses Bluetooth to communicate with Garmin devices.";
+				INFOPLIST_KEY_NSBluetoothWhileInUseUsageDescription = "uses it here";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -442,6 +500,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.EdgeAlertReceiver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
